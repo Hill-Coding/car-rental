@@ -1,7 +1,5 @@
 package model;
 
-import java.util.Date;
-
 // TODO add class fields
 // TODO add constructor
 // TODO add getters and setters
