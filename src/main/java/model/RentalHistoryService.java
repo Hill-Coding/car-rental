@@ -11,13 +11,11 @@ public class RentalHistoryService {
         this.rentalHistoryRepository = rentalHistoryRepository;
     }
 
-    // TODO
     List<Rent> userRentalHistory(User user) {
-        throw new RuntimeException("Not implemented yet");
+        return rentalHistoryRepository.forUser(user);
     }
 
-    // TODO
     List<Rent> carRentalHistory(Car car) {
-        throw new RuntimeException("Not implemented yet");
+        return rentalHistoryRepository.forCar(car);
     }
 }
