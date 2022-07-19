@@ -8,12 +8,13 @@ import java.util.List;
 public class RentalHistoryRepository {
     private List<Rent> rentalHistory;
 
-    // TODO
     public List<Rent> forUser(User user) {
-        throw new RuntimeException("Not implemented yet");
+        return rentalHistory.stream()
+                .filter(rent -> rent.getUser() == user)
+                .toList();
     }
 
-    // TODOg
+    // TODO
     public List<Rent> forCar(Car car) {
         throw new RuntimeException("Not implemented yet");
     }

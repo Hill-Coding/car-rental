@@ -14,4 +14,8 @@ public class Rent {
     private LocalDateTime from;
     private LocalDateTime to;
     private BigDecimal price;
+
+    public User getUser() {
+        return user;
+    }
 }
