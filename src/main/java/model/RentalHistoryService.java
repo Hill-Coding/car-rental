@@ -7,8 +7,13 @@ import java.util.List;
 // TODO add getters and setters
 // TODO add equals and hashcode
 // TODO add toString
-public class RentalHistory {
-    private List<Rent> rentalHistory;
+public class RentalHistoryService {
+
+    private final RentalHistoryRepository rentalHistoryRepository;
+
+    public RentalHistoryService(RentalHistoryRepository rentalHistoryRepository) {
+        this.rentalHistoryRepository = rentalHistoryRepository;
+    }
 
     // TODO
     List<Rent> userRentalHistory(User user) {
