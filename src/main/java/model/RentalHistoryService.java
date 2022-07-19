@@ -11,7 +11,7 @@ public class RentalHistoryService {
     }
 
     // TODO
-    public List<Rent> forUser(User user) {
+    public List<Rent> forCustomer(Customer customer) {
         throw new RuntimeException("Not implemented yet");
     }
 

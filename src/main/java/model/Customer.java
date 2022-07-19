@@ -5,7 +5,7 @@ package model;
 // TODO add getters and setters
 // TODO add equals and hashcode
 // TODO add toString
-public class User {
+public class Customer {
     private String firstName;
     private String lastName;
     private String email;

@@ -9,13 +9,13 @@ import java.time.LocalDateTime;
 // TODO add equals and hashcode
 // TODO add toString
 public class Rent {
-    private User user;
+    private Customer customer;
     private Car car;
     private LocalDateTime from;
     private LocalDateTime to;
     private BigDecimal price;
 
-    public User getUser() {
-        return user;
+    public Customer getCustomer() {
+        return customer;
     }
 }
