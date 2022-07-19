@@ -14,5 +14,4 @@ public class User {
     private String phoneNumber;
     // FIXME change to suitable Java class (Date, LocalDate,...)
     private String dateOfBirth;
-    private List<Rent> rentalHistory;
 }
