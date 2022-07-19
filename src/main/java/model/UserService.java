@@ -6,4 +6,14 @@ public class UserService {
     public UserService(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
+
+    // TODO
+    void addUser() {
+
+    }
+
+    // TODO
+    void deleteUser() {
+
+    }
 }

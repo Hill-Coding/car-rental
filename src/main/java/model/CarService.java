@@ -7,4 +7,14 @@ public class CarService {
     public CarService(CarRepository carRepository) {
         this.carRepository = carRepository;
     }
+
+    // TODO
+    void addCar() {
+
+    }
+
+    // TODO
+    void deleteCar() {
+
+    }
 }
