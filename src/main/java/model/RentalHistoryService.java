@@ -2,7 +2,6 @@ package model;
 
 import java.util.List;
 
-// TODO add getters and setters
 public class RentalHistoryService {
 
     private final RentalHistoryRepository rentalHistoryRepository;
@@ -11,11 +10,13 @@ public class RentalHistoryService {
         this.rentalHistoryRepository = rentalHistoryRepository;
     }
 
-    List<Rent> userRentalHistory(User user) {
-        return rentalHistoryRepository.forUser(user);
+    // TODO
+    public List<Rent> forUser(User user) {
+        throw new RuntimeException("Not implemented yet");
     }
 
-    List<Rent> carRentalHistory(Car car) {
-        return rentalHistoryRepository.forCar(car);
+    // TODO
+    public List<Rent> forCar(Car car) {
+        throw new RuntimeException("Not implemented yet");
     }
 }
