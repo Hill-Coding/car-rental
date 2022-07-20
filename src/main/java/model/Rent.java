@@ -13,6 +13,8 @@ public class Rent {
     private Car car;
     private LocalDateTime from;
     private LocalDateTime to;
+    private String placeOfRent;
+    private String placeOfReturn;
     private BigDecimal price;
 
     public Customer getCustomer() {
