@@ -18,8 +18,4 @@ public class Rent {
     private String placeOfRent;
     private String placeOfReturn;
     private BigDecimal price;
-
-    public Customer getCustomer() {
-        return customer;
-    }
 }
