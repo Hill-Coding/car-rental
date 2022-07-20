@@ -12,4 +12,7 @@ public class Customer {
     private String phoneNumber;
     // FIXME change to suitable Java class (Date, LocalDate,...)
     private String dateOfBirth;
+    private String drivingLicenseNumber;
+
+    // pole z adresem też? czy bez sensu
 }
