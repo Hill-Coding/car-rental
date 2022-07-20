@@ -1,5 +1,7 @@
 package model;
 
+import model.car.Car;
+
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
