@@ -1,6 +1,7 @@
 package model;
 
 import model.car.Car;
+import model.customer.Customer;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;

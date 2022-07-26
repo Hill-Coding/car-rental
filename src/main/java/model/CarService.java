@@ -1,12 +1,13 @@
 package model;
 
+import model.car.Car;
+
+import java.util.List;
+
 public class CarService {
 
-    private final CarRepository carRepository;
+    private List<Car> cars;
 
-    public CarService(CarRepository carRepository) {
-        this.carRepository = carRepository;
-    }
 
     // TODO
     void addCar() {

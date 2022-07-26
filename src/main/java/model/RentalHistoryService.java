@@ -1,16 +1,13 @@
 package model;
 
 import model.car.Car;
+import model.customer.Customer;
 
 import java.util.List;
 
 public class RentalHistoryService {
 
-    private final RentalHistoryRepository rentalHistoryRepository;
-
-    public RentalHistoryService(RentalHistoryRepository rentalHistoryRepository) {
-        this.rentalHistoryRepository = rentalHistoryRepository;
-    }
+    private List<Rent> rentalHistory;
 
     // TODO
     public List<Rent> forCustomer(Customer customer) {

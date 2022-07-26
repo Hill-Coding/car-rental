@@ -1,6 +1,6 @@
 package exception;
 
-import model.Customer;
+import model.customer.Customer;
 
 public class CustomerAlreadyExistsException extends RuntimeException {
 
