@@ -4,8 +4,8 @@ import model.*;
 
 class CarRentalControl {
 
-    private final CarService carService = new CarService(new CarRepository());
-    private final CustomerService customerService = new CustomerService(new CustomerRepository());
+    private final CarService carService = new CarService();
+    private final CustomerService customerService = new CustomerService();
     private final RentalService rentalService = new RentalService();
 
     // TODO implement method
