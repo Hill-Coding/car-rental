@@ -10,14 +10,14 @@ public class CarService {
 
     private List<Car> cars;
 
-    void addCar(Car car) {
+    public void addCar(Car car) {
         if (cars.contains(car)) {
             throw new CarAlreadyExistsException(car);
         }
         cars.add(car);
     }
 
-    void deleteCarByVin(String vin) {
+    public void deleteCarByVin(String vin) {
         Car carToDelete = cars.stream()
                 .filter(car -> car.getVin().equals(vin))
                 .findFirst()
