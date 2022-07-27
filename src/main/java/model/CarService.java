@@ -1,6 +1,7 @@
 package model;
 
 import exception.CarAlreadyExistsException;
+import exception.CarNotFoundException;
 import model.car.Car;
 
 import java.util.List;
@@ -16,8 +17,11 @@ public class CarService {
         cars.add(car);
     }
 
-    // TODO
-    void deleteCar() {
-
+    void deleteCarByVin(String vin) {
+        Car carToDelete = cars.stream()
+                .filter(car -> car.getVin().equals(vin))
+                .findFirst()
+                .orElseThrow(CarNotFoundException::new);
+        cars.remove(carToDelete);
     }
 }
