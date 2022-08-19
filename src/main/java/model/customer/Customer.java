@@ -108,4 +108,5 @@ public class Customer {
     }
     // pole z adresem też? czy bez sensu
     // chyba powinno być..
+    //wg mnie powinno
 }

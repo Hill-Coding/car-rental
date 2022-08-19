@@ -1,7 +1,7 @@
 package exception;
 
-public class CarNotFoundException extends RuntimeException{
+public class CarNotFoundException extends RuntimeException {
     public CarNotFoundException() {
-        super();
+        super("Brak wyszukiwanego samochodu");
     }
 }
