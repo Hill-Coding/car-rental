@@ -1,6 +1,7 @@
 package model;
 
 import exception.CustomerAlreadyExistsException;
+import exception.CustomerNotFoundException;
 import model.customer.Customer;
 
 import java.util.List;
