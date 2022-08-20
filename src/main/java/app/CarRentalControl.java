@@ -3,6 +3,7 @@ package app;
 import model.CarService;
 import model.CustomerService;
 import model.RentalService;
+import optionsEnum.CarMenuOptions;
 import optionsEnum.MainOptions;
 
 import java.util.Scanner;
@@ -43,27 +44,46 @@ class CarRentalControl {
     // TODO
     private void carMenu() {
         System.out.println("TEST Zarządzanie samochodami");
-        int option;
+        CarMenuOptions option;
         do {
-            option = scanner.nextInt();
+            CarMenuOptions.printOptions();
+            option = CarMenuOptions.getOptionFromInt(scanner.nextInt());
             scanner.nextLine();
 
             switch (option) {
-                case 0 -> System.out.println("Cofam do poprzedniego menu");
-                case 1 -> addCar();
+                case PREVIOUS_MENU -> System.out.println("Cofam do poprzedniego menu");
+                case ADD_CAR -> addCar();
+                case DELETE_CAR -> deleteCar();
+                case FIND_CAR -> findCar();
+                case BLOCK_CAR -> blockCar();
+                case CHECK_CAR_RENT_HISTORY -> checkCarRentHistory();
                 default -> System.out.println(CHOOSE_PROPER_OPTION_MESSAGE);
             }
-        } while (option != 0);
+        } while (option != CarMenuOptions.PREVIOUS_MENU);
+    }
+
+    // TODO
+    private void checkCarRentHistory() {
+    }
+
+    // TODO
+    private void blockCar() {
+    }
+
+    // TODO
+    private void findCar() {
+    }
+
+    // TODO
+    private void deleteCar() {
     }
 
     // TODO
     private void rentMenu() {
-
     }
 
     // TODO
     private void customerMenu() {
-
     }
 
     // TODO
