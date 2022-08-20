@@ -3,6 +3,7 @@ package app;
 import model.CarService;
 import model.CustomerService;
 import model.RentalService;
+import optionsEnum.MainOptions;
 
 import java.util.Scanner;
 
@@ -21,24 +22,22 @@ class CarRentalControl {
     void controlLoop() {
         System.out.println("Control loop");
 
-        // TODO change to Option enum
-        int option;
+        MainOptions option;
 
         do {
             System.out.println("TEST Menu główne");
 
-            option = scanner.nextInt();
-            scanner.nextLine();
+            option = MainOptions.getOptionFromInt(scanner.nextInt());
 
             // TODO
             switch (option) {
-                case 0 -> exit();
-                case 1 -> carMenu();
-                case 2 -> customerMenu();
-                case 3 -> rentMenu();
+                case EXIT -> exit();
+                case CAR_MENU -> carMenu();
+                case CUSTOMER_MENU -> customerMenu();
+                case RENT_MENU -> rentMenu();
                 default -> System.out.println(CHOOSE_PROPER_OPTION_MESSAGE);
             }
-        } while (option != 0);
+        } while (option != MainOptions.EXIT);
     }
 
     // TODO
