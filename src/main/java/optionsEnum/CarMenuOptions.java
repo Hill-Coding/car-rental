@@ -18,7 +18,7 @@ public enum CarMenuOptions {
         this.value = value;
     }
 
-    public static CarMenuOptions getOptionFromInt(int number) {
+    public static CarMenuOptions getOptionFromInt(int number) throws NoSuchOptionException {
         try {
             return CarMenuOptions.values()[number];
         } catch (ArrayIndexOutOfBoundsException e) {

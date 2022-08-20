@@ -16,7 +16,7 @@ public enum MainOptions {
         this.value = value;
     }
 
-    public static MainOptions getOptionFromInt(int number) {
+    public static MainOptions getOptionFromInt(int number) throws NoSuchOptionException {
         try {
             return MainOptions.values()[number];
         } catch (ArrayIndexOutOfBoundsException e) {

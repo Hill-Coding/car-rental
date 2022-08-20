@@ -1,11 +1,13 @@
 package app;
 
+import exception.NoSuchOptionException;
 import model.CarService;
 import model.CustomerService;
 import model.RentalService;
 import optionsEnum.CarMenuOptions;
 import optionsEnum.MainOptions;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 class CarRentalControl {
@@ -21,14 +23,28 @@ class CarRentalControl {
 
     // TODO
     void controlLoop() {
-        MainOptions option;
+        MainOptions option = null;
 
         do {
             System.out.println("Menu główne");
             MainOptions.printOptions();
-            option = MainOptions.getOptionFromInt(scanner.nextInt());
 
-            // TODO
+            // FIXME move to separate method, example: private MenuOption getOption();
+            // fixme from here -> {
+            boolean optionOk = false;
+            while (!optionOk) {
+                try {
+                    option = MainOptions.getOptionFromInt(scanner.nextInt());
+                    optionOk = true;
+                } catch (NoSuchOptionException e) {
+                    System.out.println(e.getMessage());
+                } catch (InputMismatchException e) {
+                    System.out.println("Opcja musi być liczbą");
+                }
+                scanner.nextLine();
+            }
+            // fixme } <- to here
+
             switch (option) {
                 case EXIT -> exit();
                 case CAR_MENU -> carMenu();
@@ -39,12 +55,12 @@ class CarRentalControl {
         } while (option != MainOptions.EXIT);
     }
 
-    // TODO
     private void carMenu() {
         System.out.println("Zarządzanie samochodami");
         CarMenuOptions option;
         do {
             CarMenuOptions.printOptions();
+            // FIXME getOptionFromInt can throw NoSuchOptionException or InputMismatchException
             option = CarMenuOptions.getOptionFromInt(scanner.nextInt());
 
             switch (option) {
@@ -59,41 +75,48 @@ class CarRentalControl {
         } while (option != CarMenuOptions.PREVIOUS_MENU);
     }
 
+    // TODO
+    private void rentMenu() {
+        throw new RuntimeException("Not implemented yet");
+    }
+
+    // TODO
+    private void customerMenu() {
+        throw new RuntimeException("Not implemented yet");
+    }
+
+
     // FIXME should it be just empty method?
     private void previousMenu() {
     }
 
     // TODO
     private void checkCarRentHistory() {
+        throw new RuntimeException("Not implemented yet");
     }
 
     // TODO
     private void blockCar() {
+        throw new RuntimeException("Not implemented yet");
     }
 
     // TODO
     private void findCar() {
+        throw new RuntimeException("Not implemented yet");
     }
 
     // TODO
     private void deleteCar() {
-    }
-
-    // TODO
-    private void rentMenu() {
-    }
-
-    // TODO
-    private void customerMenu() {
+        throw new RuntimeException("Not implemented yet");
     }
 
     // TODO
     private void addCar() {
-        System.out.println("TEST Dodaj samochód");
+        throw new RuntimeException("Not implemented yet");
     }
 
     // TODO
     private void exit() {
-        System.out.println("TEST Wyjście z programu");
+        System.out.println("Wyjście z programu");
     }
 }
