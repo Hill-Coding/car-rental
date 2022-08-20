@@ -21,13 +21,11 @@ class CarRentalControl {
 
     // TODO
     void controlLoop() {
-        System.out.println("Control loop");
-
         MainOptions option;
 
         do {
-            System.out.println("TEST Menu główne");
-
+            System.out.println("Menu główne");
+            MainOptions.printOptions();
             option = MainOptions.getOptionFromInt(scanner.nextInt());
 
             // TODO
@@ -43,15 +41,14 @@ class CarRentalControl {
 
     // TODO
     private void carMenu() {
-        System.out.println("TEST Zarządzanie samochodami");
+        System.out.println("Zarządzanie samochodami");
         CarMenuOptions option;
         do {
             CarMenuOptions.printOptions();
             option = CarMenuOptions.getOptionFromInt(scanner.nextInt());
-            scanner.nextLine();
 
             switch (option) {
-                case PREVIOUS_MENU -> System.out.println("Cofam do poprzedniego menu");
+                case PREVIOUS_MENU -> previousMenu();
                 case ADD_CAR -> addCar();
                 case DELETE_CAR -> deleteCar();
                 case FIND_CAR -> findCar();
@@ -60,6 +57,10 @@ class CarRentalControl {
                 default -> System.out.println(CHOOSE_PROPER_OPTION_MESSAGE);
             }
         } while (option != CarMenuOptions.PREVIOUS_MENU);
+    }
+
+    // FIXME should it be just empty method?
+    private void previousMenu() {
     }
 
     // TODO
