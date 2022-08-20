@@ -85,7 +85,6 @@ class CarRentalControl {
         throw new RuntimeException("Not implemented yet");
     }
 
-
     // FIXME should it be just empty method?
     private void previousMenu() {
     }
@@ -115,7 +114,7 @@ class CarRentalControl {
         throw new RuntimeException("Not implemented yet");
     }
 
-    // TODO
+    // TODO should close some file connections and scanner?
     private void exit() {
         System.out.println("Wyjście z programu");
     }
