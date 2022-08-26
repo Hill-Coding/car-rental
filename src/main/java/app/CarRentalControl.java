@@ -1,6 +1,7 @@
 package app;
 
 import exception.NoSuchOptionException;
+import io.DataReader;
 import model.CarService;
 import model.CustomerService;
 import model.RentalService;
@@ -16,8 +17,7 @@ class CarRentalControl {
     private final CustomerService customerService = new CustomerService();
     private final RentalService rentalService = new RentalService();
 
-    // TODO move to input/output class
-    private final Scanner scanner = new Scanner(System.in);
+    private final DataReader dataReader = new DataReader();
 
     private static final String CHOOSE_PROPER_OPTION_MESSAGE = "Wybierz poprawną opcję";
 
@@ -34,14 +34,13 @@ class CarRentalControl {
             boolean optionOk = false;
             while (!optionOk) {
                 try {
-                    option = MainOptions.getOptionFromInt(scanner.nextInt());
+                    option = MainOptions.getOptionFromInt(dataReader.readInt());
                     optionOk = true;
                 } catch (NoSuchOptionException e) {
                     System.out.println(e.getMessage());
                 } catch (InputMismatchException e) {
                     System.out.println("Opcja musi być liczbą");
                 }
-                scanner.nextLine();
             }
             // fixme } <- to here
 
@@ -61,7 +60,7 @@ class CarRentalControl {
         do {
             CarMenuOptions.printOptions();
             // FIXME getOptionFromInt can throw NoSuchOptionException or InputMismatchException
-            option = CarMenuOptions.getOptionFromInt(scanner.nextInt());
+            option = CarMenuOptions.getOptionFromInt(dataReader.readInt());
 
             switch (option) {
                 case PREVIOUS_MENU -> previousMenu();
@@ -116,6 +115,7 @@ class CarRentalControl {
 
     // TODO should close some file connections and scanner?
     private void exit() {
+        dataReader.close();
         System.out.println("Wyjście z programu");
     }
 }
