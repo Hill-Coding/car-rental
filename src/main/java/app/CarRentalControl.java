@@ -9,7 +9,6 @@ import optionsEnum.CarMenuOptions;
 import optionsEnum.MainOptions;
 
 import java.util.InputMismatchException;
-import java.util.Scanner;
 
 class CarRentalControl {
 
