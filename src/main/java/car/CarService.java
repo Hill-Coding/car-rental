@@ -4,11 +4,12 @@ import car.model.Car;
 import exception.CarAlreadyExistsException;
 import exception.CarNotFoundException;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class CarService {
 
-    private List<Car> cars;
+    private List<Car> cars = new ArrayList<>();
 
     public void addCar(Car car) {
         if (cars.contains(car)) {
@@ -23,5 +24,9 @@ public class CarService {
                 .findFirst()
                 .orElseThrow(CarNotFoundException::new);
         cars.remove(carToDelete);
+    }
+
+    public void printAllCars() {
+        cars.forEach(System.out::println);
     }
 }

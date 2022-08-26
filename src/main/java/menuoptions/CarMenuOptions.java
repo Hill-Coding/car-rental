@@ -8,7 +8,8 @@ public enum CarMenuOptions {
     DELETE_CAR(2, "Usuń samochód"),
     FIND_CAR(3, "Wyszukaj samochód"),
     BLOCK_CAR(4, "Zablokuj samochód"),
-    CHECK_CAR_RENT_HISTORY(5, "Historia wypożyczeń samochodu");
+    CHECK_CAR_RENT_HISTORY(5, "Historia wypożyczeń samochodu"),
+    SHOW_ALL_CARS(6, "Lista samochodów");
 
     private int value;
     private String message;

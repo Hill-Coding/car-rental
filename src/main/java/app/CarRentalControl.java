@@ -1,5 +1,6 @@
 package app;
 
+import car.model.Car;
 import exception.NoSuchOptionException;
 import io.DataReader;
 import car.CarService;
@@ -68,9 +69,14 @@ class CarRentalControl {
                 case FIND_CAR -> findCar();
                 case BLOCK_CAR -> blockCar();
                 case CHECK_CAR_RENT_HISTORY -> checkCarRentHistory();
+                case SHOW_ALL_CARS -> showAllCars();
                 default -> System.out.println(CHOOSE_PROPER_OPTION_MESSAGE);
             }
         } while (option != CarMenuOptions.PREVIOUS_MENU);
+    }
+
+    private void showAllCars() {
+        carService.printAllCars();
     }
 
     // TODO
@@ -109,7 +115,8 @@ class CarRentalControl {
 
     // TODO
     private void addCar() {
-        throw new RuntimeException("Not implemented yet");
+        Car carToSave = dataReader.readAndCreateCar();
+        carService.addCar(carToSave);
     }
 
     // TODO should close some file connections and scanner?

@@ -144,9 +144,32 @@ public class Car {
         return vin != null ? vin.hashCode() : 0;
     }
 
-    private class Engine {
+    @Override
+    public String toString() {
+        return "Car{" +
+                "brand='" + brand + '\'' +
+                ", model='" + model + '\'' +
+                ", engine=" + engine +
+                ", engineType=" + engineType +
+                ", gearbox=" + gearbox +
+                ", basePrice=" + basePrice +
+                ", vin='" + vin + '\'' +
+                ", productionYear='" + productionYear + '\'' +
+                ", carType=" + carType +
+                ", carSegment=" + carSegment +
+                ", seats=" + seats +
+                ", availability=" + availability +
+                '}';
+    }
+
+    public static class Engine {
         private double capacity;
         private int power;
+
+        public Engine(double capacity, int power) {
+            this.capacity = capacity;
+            this.power = power;
+        }
 
         public double getCapacity() {
             return capacity;
