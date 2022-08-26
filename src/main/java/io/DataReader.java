@@ -71,9 +71,10 @@ public class DataReader {
         scanner.nextLine();
 
         System.out.println("Dostępność:");
-        System.out.println("For tests is always 'true'");
+        System.out.println("For tests availability is always 'true'");
+        boolean availability = true;
 
         return new Car(brand, model, engine, engineType, gearbox, basePrice, vin,
-                productionYear, carType, carSegment, numberOfSeats, true);
+                productionYear, carType, carSegment, numberOfSeats, availability);
     }
 }

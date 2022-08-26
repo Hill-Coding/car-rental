@@ -10,6 +10,7 @@ public class Car {
     private Gearbox gearbox;
     private BigDecimal basePrice;
     private String vin;
+    // fixme change to java.time.year
     private String productionYear;
     private CarType carType;
     private CarSegment carSegment;
