@@ -1,4 +1,4 @@
-package model.customer;
+package customer.model;
 
 import java.time.LocalDate;
 

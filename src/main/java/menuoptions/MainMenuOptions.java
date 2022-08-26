@@ -1,8 +1,8 @@
-package optionsEnum;
+package menuoptions;
 
 import exception.NoSuchOptionException;
 
-public enum MainOptions {
+public enum MainMenuOptions {
     EXIT(0, "Wyjście z programu"),
     CAR_MENU(1, "Zarządzanie flotą"),
     CUSTOMER_MENU(2, "Zarządzanie klientami"),
@@ -11,21 +11,21 @@ public enum MainOptions {
     private int value;
     private String message;
 
-    MainOptions(int value, String message) {
+    MainMenuOptions(int value, String message) {
         this.message = message;
         this.value = value;
     }
 
-    public static MainOptions getOptionFromInt(int number) throws NoSuchOptionException {
+    public static MainMenuOptions getOptionFromInt(int number) throws NoSuchOptionException {
         try {
-            return MainOptions.values()[number];
+            return MainMenuOptions.values()[number];
         } catch (ArrayIndexOutOfBoundsException e) {
             throw new NoSuchOptionException("Brak opcji o id " + number);
         }
     }
 
     public static void printOptions() {
-        for (MainOptions option : MainOptions.values()) {
+        for (MainMenuOptions option : MainMenuOptions.values()) {
             System.out.println(option.value + " -> " + option.message);
         }
     }

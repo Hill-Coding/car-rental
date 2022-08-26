@@ -1,4 +1,4 @@
-package model.car;
+package car.model;
 
 public enum EngineType {
     DIESEL, PETROL, GAS, ELECTRIC, HYBRID

@@ -2,11 +2,11 @@ package app;
 
 import exception.NoSuchOptionException;
 import io.DataReader;
-import model.CarService;
-import model.CustomerService;
-import model.RentalService;
-import optionsEnum.CarMenuOptions;
-import optionsEnum.MainOptions;
+import car.CarService;
+import customer.CustomerService;
+import rent.RentalService;
+import menuoptions.CarMenuOptions;
+import menuoptions.MainMenuOptions;
 
 import java.util.InputMismatchException;
 
@@ -22,18 +22,18 @@ class CarRentalControl {
 
     // TODO
     void controlLoop() {
-        MainOptions option = null;
+        MainMenuOptions option = null;
 
         do {
             System.out.println("Menu główne");
-            MainOptions.printOptions();
+            MainMenuOptions.printOptions();
 
             // FIXME move to separate method, example: private MenuOption getOption();
             // fixme from here -> {
             boolean optionOk = false;
             while (!optionOk) {
                 try {
-                    option = MainOptions.getOptionFromInt(dataReader.readInt());
+                    option = MainMenuOptions.getOptionFromInt(dataReader.readInt());
                     optionOk = true;
                 } catch (NoSuchOptionException e) {
                     System.out.println(e.getMessage());
@@ -50,7 +50,7 @@ class CarRentalControl {
                 case RENT_MENU -> rentMenu();
                 default -> System.out.println(CHOOSE_PROPER_OPTION_MESSAGE);
             }
-        } while (option != MainOptions.EXIT);
+        } while (option != MainMenuOptions.EXIT);
     }
 
     private void carMenu() {

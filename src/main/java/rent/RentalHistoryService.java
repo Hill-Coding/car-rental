@@ -1,7 +1,7 @@
-package model;
+package rent;
 
-import model.car.Car;
-import model.customer.Customer;
+import car.model.Car;
+import customer.model.Customer;
 
 import java.util.List;
 

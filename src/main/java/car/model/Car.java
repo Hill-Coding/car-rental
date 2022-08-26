@@ -1,4 +1,4 @@
-package model.car;
+package car.model;
 
 import java.math.BigDecimal;
 

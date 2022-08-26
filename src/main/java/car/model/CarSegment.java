@@ -1,4 +1,4 @@
-package model.car;
+package car.model;
 
 public enum CarSegment {
     //TODO check standard of segments

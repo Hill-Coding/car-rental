@@ -1,8 +1,8 @@
-package model;
+package car;
 
+import car.model.Car;
 import exception.CarAlreadyExistsException;
 import exception.CarNotFoundException;
-import model.car.Car;
 
 import java.util.List;
 

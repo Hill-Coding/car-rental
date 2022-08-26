@@ -1,6 +1,6 @@
 package exception;
 
-import model.car.Car;
+import car.model.Car;
 
 public class CarAlreadyExistsException extends RuntimeException {
 

@@ -1,4 +1,4 @@
-package model;
+package rent;
 
 public class RentalService {
 

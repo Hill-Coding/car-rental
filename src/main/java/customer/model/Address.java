@@ -1,4 +1,4 @@
-package model.customer;
+package customer.model;
 
 public class Address {
     private String country;

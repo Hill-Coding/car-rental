@@ -1,4 +1,4 @@
-package optionsEnum;
+package menuoptions;
 
 import exception.NoSuchOptionException;
 
