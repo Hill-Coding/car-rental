@@ -1,4 +1,4 @@
-package menuoptions;
+package menuOptions;
 
 import exception.NoSuchOptionException;
 

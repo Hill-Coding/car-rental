@@ -128,8 +128,7 @@ public class Car {
     public void setAvailability(boolean availability) {
         this.availability = availability;
     }
-
-    //Fixme was equals and hashCode was generated based only on vin number, is it correct?
+    
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

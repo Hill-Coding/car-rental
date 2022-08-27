@@ -19,9 +19,10 @@ public class CustomerService {
 
     // TODO
     void deleteCustomer(String drivingLicenseNumber) {
-        customers.stream()
+        Customer customerToDelate = customers.stream()
                 .filter(customer -> customer.getDrivingLicenseNumber().equals(drivingLicenseNumber))
                 .findFirst()
                 .orElseThrow(CustomerNotFoundException::new);
+        customers.remove(customerToDelate);
     }
 }

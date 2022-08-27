@@ -6,8 +6,8 @@ import io.DataReader;
 import car.CarService;
 import customer.CustomerService;
 import rent.RentalService;
-import menuoptions.CarMenuOptions;
-import menuoptions.MainMenuOptions;
+import menuOptions.CarMenuOptions;
+import menuOptions.MainMenuOptions;
 
 import java.util.InputMismatchException;
 
@@ -39,7 +39,7 @@ class CarRentalControl {
                 } catch (NoSuchOptionException e) {
                     System.out.println(e.getMessage());
                 } catch (InputMismatchException e) {
-                    System.out.println("Opcja musi być liczbą");
+                    System.out.println("Nieprawidłowy format danych");
                 }
             }
             // fixme } <- to here
