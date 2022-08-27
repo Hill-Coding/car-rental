@@ -1,5 +1,6 @@
 package subMenuControl;
 
+import app.CarRentalControl;
 import car.CarService;
 import car.model.Car;
 import io.DataReader;
@@ -34,6 +35,8 @@ public class CarMenuControl {
     }
 
     private void previousMenu() {
+        CarRentalControl carRentalControl = new CarRentalControl();
+        carRentalControl.controlLoop();
     }
 
     private void addCar() {
@@ -42,7 +45,8 @@ public class CarMenuControl {
     }
 
     private void deleteCar() {
-        throw new RuntimeException("Not implemented yet");
+        System.out.println("Podaj vin");
+        carService.deleteCarByVin(dataReader.readString());
     }
 
     private void findCar() {

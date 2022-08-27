@@ -1,5 +1,6 @@
 package subMenuControl;
 
+import app.CarRentalControl;
 import io.DataReader;
 import menuOptions.RentMenuOption;
 
@@ -27,18 +28,21 @@ public class RentMenuControl {
     }
 
     private void previousMenu() {
-
+        CarRentalControl carRentalControl = new CarRentalControl();
+        carRentalControl.controlLoop();
     }
 
     private void rentCar() {
-
+        throw new RuntimeException("Not implemented yet");
     }
 
     private void checkCurrentAvailableCar() {
+        throw new RuntimeException("Not implemented yet");
 
     }
 
     private void checkAvailebleCarForSelectedDate() {
+        throw new RuntimeException("Not implemented yet");
 
     }
 }

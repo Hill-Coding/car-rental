@@ -16,6 +16,7 @@ public class CarService {
             throw new CarAlreadyExistsException(car);
         }
         cars.add(car);
+        System.out.println("Dodano nowy samochód");
     }
 
     public void deleteCarByVin(String vin) {
@@ -24,6 +25,7 @@ public class CarService {
                 .findFirst()
                 .orElseThrow(CarNotFoundException::new);
         cars.remove(carToDelete);
+        System.out.println("Usunięto samochód");
     }
 
     public void printAllCars() {

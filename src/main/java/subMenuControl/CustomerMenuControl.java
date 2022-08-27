@@ -1,5 +1,6 @@
 package subMenuControl;
 
+import app.CarRentalControl;
 import io.DataReader;
 import menuOptions.CustomerMenuOptions;
 
@@ -9,7 +10,7 @@ public class CustomerMenuControl {
 
     DataReader dataReader = new DataReader();
 
-    public void customerMenu(int number) {
+    public void customerMenu() {
         System.out.println("Zarządzenie klientami");
         CustomerMenuOptions option;
 
@@ -32,23 +33,31 @@ public class CustomerMenuControl {
     }
 
     private void previousMenu() {
+        CarRentalControl carRentalControl = new CarRentalControl();
+        carRentalControl.controlLoop();
     }
 
     private void addCustomer() {
+        throw new RuntimeException("Not implemented yet");
     }
 
     private void deleteCustomer() {
+        throw new RuntimeException("Not implemented yet");
     }
 
     private void findCustomers() {
+        throw new RuntimeException("Not implemented yet");
     }
 
     private void editCustomer() {
+        throw new RuntimeException("Not implemented yet");
     }
 
     private void rentCustomerRentHistory() {
+        throw new RuntimeException("Not implemented yet");
     }
 
     private void pritnCustomers() {
+        throw new RuntimeException("Not implemented yet");
     }
 }

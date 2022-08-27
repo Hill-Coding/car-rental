@@ -1,12 +1,14 @@
 package app;
 
-import exception.NoSuchOptionException;
-import io.DataReader;
 import car.CarService;
 import customer.CustomerService;
-import subMenuControl.CarMenuControl;
-import rent.RentalService;
+import exception.NoSuchOptionException;
+import io.DataReader;
 import menuOptions.MainMenuOptions;
+import rent.RentalService;
+import subMenuControl.CarMenuControl;
+import subMenuControl.CustomerMenuControl;
+import subMenuControl.RentMenuControl;
 
 import java.util.InputMismatchException;
 
@@ -21,7 +23,7 @@ public class CarRentalControl {
     private static final String CHOOSE_PROPER_OPTION_MESSAGE = "Wybierz poprawną opcję";
 
     // TODO
-    void controlLoop() {
+    public void controlLoop() {
         MainMenuOptions option = null;
 
         do {
@@ -58,14 +60,14 @@ public class CarRentalControl {
         carControl.carMenu();
     }
 
-    // TODO
     private void rentMenu() {
-        throw new RuntimeException("Not implemented yet");
+        RentMenuControl rentMenuControl = new RentMenuControl();
+        rentMenuControl.rentMenu();
     }
 
-    // TODO
     private void customerMenu() {
-        throw new RuntimeException("Not implemented yet");
+        CustomerMenuControl customerMenuControl = new CustomerMenuControl();
+        customerMenuControl.customerMenu();
     }
 
     // TODO should close some file connections and scanner?
