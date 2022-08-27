@@ -9,7 +9,7 @@ public enum CustomerMenuOptions {
     FIND_CUSTOMER(3, "Wyszukaj użytkownika"),
     EDIT_CUSTOMER_DATA(4, "Edytuj dane użytkownika"),
     CHECK_CUSTOMER_RENT_HISTORY(5, "Historia wypożyczeń użytkownia"),
-    SHOW_ALL_CARS(6, "Lista użytkowników");
+    SHOW_ALL_CUSTOMERS(6, "Lista użytkowników");
 
     private int value;
     private String message;
@@ -27,7 +27,7 @@ public enum CustomerMenuOptions {
         }
     }
 
-    public void printOptions() {
+    public static void printOptions() {
         for (CustomerMenuOptions option : CustomerMenuOptions.values()) {
             System.out.println(option.value + " -> " + option.message);
         }
