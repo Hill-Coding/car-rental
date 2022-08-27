@@ -1,17 +1,16 @@
 package app;
 
-import car.model.Car;
 import exception.NoSuchOptionException;
 import io.DataReader;
 import car.CarService;
 import customer.CustomerService;
+import subMenuControl.CarMenuControl;
 import rent.RentalService;
-import menuOptions.CarMenuOptions;
 import menuOptions.MainMenuOptions;
 
 import java.util.InputMismatchException;
 
-class CarRentalControl {
+public class CarRentalControl {
 
     private final CarService carService = new CarService();
     private final CustomerService customerService = new CustomerService();
@@ -55,28 +54,8 @@ class CarRentalControl {
     }
 
     private void carMenu() {
-        System.out.println("Zarządzanie samochodami");
-        CarMenuOptions option;
-        do {
-            CarMenuOptions.printOptions();
-            // FIXME getOptionFromInt can throw NoSuchOptionException or InputMismatchException
-            option = CarMenuOptions.getOptionFromInt(dataReader.readInt());
-
-            switch (option) {
-                case PREVIOUS_MENU -> previousMenu();
-                case ADD_CAR -> addCar();
-                case DELETE_CAR -> deleteCar();
-                case FIND_CAR -> findCar();
-                case BLOCK_CAR -> blockCar();
-                case CHECK_CAR_RENT_HISTORY -> checkCarRentHistory();
-                case SHOW_ALL_CARS -> showAllCars();
-                default -> System.out.println(CHOOSE_PROPER_OPTION_MESSAGE);
-            }
-        } while (option != CarMenuOptions.PREVIOUS_MENU);
-    }
-
-    private void showAllCars() {
-        carService.printAllCars();
+        CarMenuControl carControl = new CarMenuControl();
+        carControl.carMenu();
     }
 
     // TODO
@@ -89,35 +68,40 @@ class CarRentalControl {
         throw new RuntimeException("Not implemented yet");
     }
 
-    // FIXME should it be just empty method?
-    private void previousMenu() {
-    }
+
+//    // TODO
+//    private void addCar() {
+//        Car carToSave = dataReader.readAndCreateCar();
+//        carService.addCar(carToSave);
+//    }
+
+//    private void showAllCars() {
+//        carService.printAllCars();
+//    }
+
+//    private void previousMenu () {
+//        controlLoop();
+//    }
 
     // TODO
-    private void checkCarRentHistory() {
-        throw new RuntimeException("Not implemented yet");
-    }
+//    private void deleteCar() {
+//        throw new RuntimeException("Not implemented yet");
+//    }
+
+    //TODO
+//    private void findCar() {
+//        throw new RuntimeException("Not implemented yet");
+//    }
 
     // TODO
-    private void blockCar() {
-        throw new RuntimeException("Not implemented yet");
-    }
+//    private void blockCar() {
+//        throw new RuntimeException("Not implemented yet");
+//    }
 
-    // TODO
-    private void findCar() {
-        throw new RuntimeException("Not implemented yet");
-    }
-
-    // TODO
-    private void deleteCar() {
-        throw new RuntimeException("Not implemented yet");
-    }
-
-    // TODO
-    private void addCar() {
-        Car carToSave = dataReader.readAndCreateCar();
-        carService.addCar(carToSave);
-    }
+//     // TODO
+//        private void checkCarRentHistory () {
+//            throw new RuntimeException("Not implemented yet");
+//        }
 
     // TODO should close some file connections and scanner?
     private void exit() {

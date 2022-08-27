@@ -18,4 +18,8 @@ public class Rent {
     private String placeOfRent;
     private String placeOfReturn;
     private BigDecimal price;
+    private int userNumber;
+
+
+
 }

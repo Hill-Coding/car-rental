@@ -121,7 +121,7 @@ public class DataReader {
         String buildingNumber = readString();
 
         Address customerAddress = new Address(country, city, zipCode, street, buildingNumber);
-        
+
         return new Customer(firstName, lastName, email, phoneNumber, dateOfBirth, drivingLicense, customerAddress);
     }
 }
