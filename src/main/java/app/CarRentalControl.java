@@ -68,41 +68,6 @@ public class CarRentalControl {
         throw new RuntimeException("Not implemented yet");
     }
 
-
-//    // TODO
-//    private void addCar() {
-//        Car carToSave = dataReader.readAndCreateCar();
-//        carService.addCar(carToSave);
-//    }
-
-//    private void showAllCars() {
-//        carService.printAllCars();
-//    }
-
-//    private void previousMenu () {
-//        controlLoop();
-//    }
-
-    // TODO
-//    private void deleteCar() {
-//        throw new RuntimeException("Not implemented yet");
-//    }
-
-    //TODO
-//    private void findCar() {
-//        throw new RuntimeException("Not implemented yet");
-//    }
-
-    // TODO
-//    private void blockCar() {
-//        throw new RuntimeException("Not implemented yet");
-//    }
-
-//     // TODO
-//        private void checkCarRentHistory () {
-//            throw new RuntimeException("Not implemented yet");
-//        }
-
     // TODO should close some file connections and scanner?
     private void exit() {
         dataReader.close();
