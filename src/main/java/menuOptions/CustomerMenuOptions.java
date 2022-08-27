@@ -3,7 +3,7 @@ package menuOptions;
 import exception.NoSuchOptionException;
 
 public enum CustomerMenuOptions {
-    PREVIOUS_MENU(0, "Powrót do poprzedniego menu"),
+    PREVIOUS_MENU(0, "Powrót do menu głównego"),
     ADD_CUSTOMER(1, "Dodaj uzytkownika"),
     DELETE_CUSTOMER(2, "Usuń użytkownika"),
     FIND_CUSTOMER(3, "Wyszukaj użytkownika"),
@@ -23,7 +23,7 @@ public enum CustomerMenuOptions {
         try {
             return CustomerMenuOptions.values()[number];
         } catch (ArrayIndexOutOfBoundsException e) {
-            throw new NoSuchOptionException("Brak wybranej opcji" + number);
+            throw new NoSuchOptionException("Brak opcji o id " + number);
         }
     }
 
