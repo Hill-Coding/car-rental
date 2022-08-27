@@ -1,11 +1,13 @@
 package subMenuControl;
 
+import io.DataReader;
 import menuOptions.CustomerMenuOptions;
 
 public class CustomerMenuControl {
 
     private static final String CHOOSE_PROPER_MESSAGE = "Wybierz poprawną opcję";
 
+    DataReader dataReader = new DataReader();
 
     public void customerMenu(int number) {
         System.out.println("Zarządzenie klientami");
@@ -13,7 +15,7 @@ public class CustomerMenuControl {
 
         do {
             CustomerMenuOptions.printOptions();
-            option = CustomerMenuOptions.createOptionFromInt(number);
+            option = CustomerMenuOptions.createOptionFromInt(dataReader.readInt());
 
             switch (option) {
                 case PREVIOUS_MENU -> previousMenu();
