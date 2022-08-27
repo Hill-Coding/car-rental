@@ -44,11 +44,9 @@ public class DataReader {
         double capacity = readDouble();
         System.out.println("Moc silnika:");
         int power = readInt();
-        Car.Engine engine = new Car.Engine(capacity, power);
-
         System.out.println("Typ silnika:");
-        String engineTypeString = readString();
-        EngineType engineType = EngineType.valueOf(engineTypeString);
+        Engine.EngineType engineType = Engine.EngineType.valueOf(readString());
+        Engine engine = new Engine(power, capacity, engineType);
 
         System.out.println("Skrzynia biegów:");
         String gearboxString = readString();
@@ -79,7 +77,7 @@ public class DataReader {
         System.out.println("For tests availability is always 'true'");
         boolean availability = true;
 
-        return new Car(brand, model, engine, engineType, gearbox, basePrice, vin,
+        return new Car(brand, model, engine, gearbox, basePrice, vin,
                 productionYear, carType, carSegment, numberOfSeats, availability);
     }
 }

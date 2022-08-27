@@ -6,7 +6,6 @@ public class Car {
     private String brand;
     private String model;
     private Engine engine;
-    private EngineType engineType;
     private Gearbox gearbox;
     private BigDecimal basePrice;
     private String vin;
@@ -17,12 +16,11 @@ public class Car {
     private int seats;
     private boolean availability;
 
-    public Car(String brand, String model, Engine engine, EngineType engineType, Gearbox gearbox, BigDecimal basePrice,
+    public Car(String brand, String model, Engine engine, Gearbox gearbox, BigDecimal basePrice,
                String vin, String productionYear, CarType carType, CarSegment carSegment, int seats, boolean availability) {
         this.brand = brand;
         this.model = model;
         this.engine = engine;
-        this.engineType = engineType;
         this.gearbox = gearbox;
         this.basePrice = basePrice;
         this.vin = vin;
@@ -55,14 +53,6 @@ public class Car {
 
     public void setEngine(Engine engine) {
         this.engine = engine;
-    }
-
-    public EngineType getEngineType() {
-        return engineType;
-    }
-
-    public void setEngineType(EngineType engineType) {
-        this.engineType = engineType;
     }
 
     public Gearbox getGearbox() {
@@ -128,7 +118,7 @@ public class Car {
     public void setAvailability(boolean availability) {
         this.availability = availability;
     }
-    
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -150,7 +140,6 @@ public class Car {
                 "brand='" + brand + '\'' +
                 ", model='" + model + '\'' +
                 ", engine=" + engine +
-                ", engineType=" + engineType +
                 ", gearbox=" + gearbox +
                 ", basePrice=" + basePrice +
                 ", vin='" + vin + '\'' +
@@ -160,39 +149,5 @@ public class Car {
                 ", seats=" + seats +
                 ", availability=" + availability +
                 '}';
-    }
-
-    public static class Engine {
-        private double capacity;
-        private int power;
-
-        public Engine(double capacity, int power) {
-            this.capacity = capacity;
-            this.power = power;
-        }
-
-        public double getCapacity() {
-            return capacity;
-        }
-
-        public void setCapacity(double capacity) {
-            this.capacity = capacity;
-        }
-
-        public int getPower() {
-            return power;
-        }
-
-        public void setPower(int power) {
-            this.power = power;
-        }
-
-        @Override
-        public String toString() {
-            return "Engine{" +
-                    "capacity=" + capacity +
-                    ", power=" + power +
-                    '}';
-        }
     }
 }
