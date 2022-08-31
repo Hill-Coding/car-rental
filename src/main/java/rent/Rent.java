@@ -20,6 +20,35 @@ public class Rent {
     private BigDecimal price;
     private int userNumber;
 
+    public Customer getCustomer() {
+        return customer;
+    }
 
+    public Car getCar() {
+        return car;
+    }
 
+    public LocalDateTime getFrom() {
+        return from;
+    }
+
+    public LocalDateTime getTo() {
+        return to;
+    }
+
+    public String getPlaceOfRent() {
+        return placeOfRent;
+    }
+
+    public String getPlaceOfReturn() {
+        return placeOfReturn;
+    }
+
+    public BigDecimal getPrice() {
+        return price;
+    }
+
+    public int getUserNumber() {
+        return userNumber;
+    }
 }

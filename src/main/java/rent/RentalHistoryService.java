@@ -10,12 +10,12 @@ public class RentalHistoryService {
     private List<Rent> rentalHistory;
 
     // TODO
-    public List<Rent> forCustomer(Customer customer) {
+    public void forCustomer(Customer customer) {
         throw new RuntimeException("Not implemented yet");
     }
 
     // TODO
-    public List<Rent> forCar(Car car) {
+    public void forCar(Car car) {
         throw new RuntimeException("Not implemented yet");
     }
 }

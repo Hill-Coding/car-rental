@@ -5,7 +5,7 @@ import customer.CustomerService;
 import exception.NoSuchOptionException;
 import io.DataReader;
 import menuOptions.MainMenuOptions;
-import rent.RentalService;
+import rent.RentService;
 import subMenuControl.CarMenuControl;
 import subMenuControl.CustomerMenuControl;
 import subMenuControl.RentMenuControl;
@@ -16,7 +16,7 @@ public class CarRentalControl {
 
     private final CarService carService = new CarService();
     private final CustomerService customerService = new CustomerService();
-    private final RentalService rentalService = new RentalService();
+    private final RentService rentService = new RentService();
 
     private final DataReader dataReader = new DataReader();
 
