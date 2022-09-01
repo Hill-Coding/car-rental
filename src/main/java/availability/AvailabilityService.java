@@ -1,4 +1,4 @@
-package utils;
+package availability;
 
 import car.model.Car;
 import car.model.CarSegment;
@@ -7,7 +7,7 @@ import rent.Rent;
 import java.time.LocalDateTime;
 import java.util.List;
 
-public class Availability {
+public class AvailabilityService {
 
     // todo implement method
     public static boolean checkAvailability(CarSegment carSegment, LocalDateTime from, LocalDateTime to) {
