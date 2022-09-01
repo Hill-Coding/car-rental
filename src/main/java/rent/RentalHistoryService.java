@@ -9,6 +9,10 @@ public class RentalHistoryService {
 
     private List<Rent> rentalHistory;
 
+    public List<Rent> getRentalHistory() {
+        return rentalHistory;
+    }
+
     // TODO
     public void forCustomer(Customer customer) {
         throw new RuntimeException("Not implemented yet");

@@ -7,7 +7,6 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 // TODO add class fields
-// TODO add constructor
 // TODO add getters and setters
 // TODO add toString
 public class Rent {
@@ -19,6 +18,24 @@ public class Rent {
     private String placeOfReturn;
     private BigDecimal price;
     private int userNumber;
+
+    public Rent(Customer customer,
+                Car car,
+                LocalDateTime from,
+                LocalDateTime to,
+                String placeOfRent,
+                String placeOfReturn,
+                BigDecimal price,
+                int userNumber) {
+        this.customer = customer;
+        this.car = car;
+        this.from = from;
+        this.to = to;
+        this.placeOfRent = placeOfRent;
+        this.placeOfReturn = placeOfReturn;
+        this.price = price;
+        this.userNumber = userNumber;
+    }
 
     public Customer getCustomer() {
         return customer;

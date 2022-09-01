@@ -1,11 +1,13 @@
 package app;
 
+import availability.AvailabilityService;
 import car.CarService;
 import customer.CustomerService;
 import exception.NoSuchOptionException;
 import io.DataReader;
 import menuOptions.MainMenuOptions;
 import rent.RentService;
+import rent.RentalHistoryService;
 import subMenuControl.CarMenuControl;
 import subMenuControl.CustomerMenuControl;
 import subMenuControl.RentMenuControl;
@@ -16,8 +18,9 @@ public class CarRentalControl {
 
     private final CarService carService = new CarService();
     private final CustomerService customerService = new CustomerService();
-    private final RentService rentService = new RentService();
-
+    private final AvailabilityService availabilityService = new AvailabilityService();
+    private final RentalHistoryService rentalHistoryService = new RentalHistoryService();
+    private final RentService rentService = new RentService(availabilityService, carService, rentalHistoryService);
     private final DataReader dataReader = new DataReader();
 
     private static final String CHOOSE_PROPER_OPTION_MESSAGE = "Wybierz poprawną opcję";
